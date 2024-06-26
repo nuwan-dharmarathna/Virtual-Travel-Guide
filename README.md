@@ -22,5 +22,5 @@ Welcome to the Virtual Travel Guide project! This application leverages LangChai
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/nuwan-dharmarathna/virtual-travel-guide.git
+   git clone https://github.com/nuwan-dharmarathna/Virtual-Travel-Guide.git
    ```
