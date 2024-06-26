@@ -9,6 +9,8 @@ Welcome to the Virtual Travel Guide project! This application leverages LangChai
 - **Cultural Insights**: Gain a deeper understanding of the local culture, traditions, and customs.
 - **Travel Tips**: Get practical advice on transportation, accommodation, and more.
 
+![Screen Recording](./data/Screen%20Recording%202024-06-26%20at%2012.11.20.gif)
+
 ### Features
 
 - **Destination Search**: Enter a destination and receive comprehensive information about it.
