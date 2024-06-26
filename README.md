@@ -1,5 +1,7 @@
 ### Virtual Travel Guide
 
+![Screenshot of the project](./data/Screenshot%202024-06-26%20at%2012.01.53.png)
+
 Welcome to the Virtual Travel Guide project! This application leverages LangChain and the OpenAI API to provide detailed information about various tourist destinations worldwide. Whether you're planning your next vacation or just exploring different cultures and places from the comfort of your home, this travel guide offers:
 
 - **Historical Facts**: Learn about the rich history of different locations.
@@ -10,8 +12,6 @@ Welcome to the Virtual Travel Guide project! This application leverages LangChai
 ### Features
 
 - **Destination Search**: Enter a destination and receive comprehensive information about it.
-- **Interactive Q&A**: Ask specific questions about the destination and get accurate answers.
-- **Personalized Recommendations**: Receive suggestions based on your interests and preferences.
 
 ### Technologies Used
 

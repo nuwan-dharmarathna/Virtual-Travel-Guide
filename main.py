@@ -25,8 +25,7 @@ elif selected_country == "Thailand":
 if selected_country:
     # st.header(selected_country)
     response = generate_country_summary(selected_country)
-    st.header(response['destination'])
-    desc = response['current_status']
-    st.write(desc)
+    st.header(selected_country)
+    st.write(response)
     
     
