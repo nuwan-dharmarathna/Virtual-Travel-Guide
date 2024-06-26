@@ -37,7 +37,7 @@ def generate_country_summary(country):
     # Implement prompt template
     prompt_temp_get_country = PromptTemplate(
         input_variables=['country'],
-        template="Provide a brief description of {country} in a way that highlights tourist attractions. Including Historical Facts, Top Attractions, Cultural Insights, Travel Tips. Separate paragraphs by each topic"
+        template="Provide a brief description of {country} in a way that highlights tourist attractions. Descibe these topics,  Historical Facts, Top Attractions, Cultural Insights, Travel Tips. Separate paragraphs by each topic"
     )
 
     llm_chain = prompt_temp_get_country | llm
