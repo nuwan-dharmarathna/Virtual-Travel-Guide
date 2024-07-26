@@ -1,28 +1,78 @@
-### Virtual Travel Guide
+# Trip Planning Bot
 
-![Screenshot of the project](./data/Screenshot%202024-06-26%20at%2012.01.53.png)
+Welcome to the Trip Planning Bot project! This bot utilizes Crewai and the OpenAI API to help users plan their trips by generating detailed itineraries. With this bot, you can receive comprehensive travel plans, including flight costs, weather forecasts, attractions, and more.
 
-Welcome to the Virtual Travel Guide project! This application leverages LangChain and the OpenAI API to provide detailed information about various tourist destinations worldwide. Whether you're planning your next vacation or just exploring different cultures and places from the comfort of your home, this travel guide offers:
+![Screenshot of the project](./bot_interface.png)
 
-- **Historical Facts**: Learn about the rich history of different locations.
-- **Top Attractions**: Discover must-visit places and hidden gems.
-- **Cultural Insights**: Gain a deeper understanding of the local culture, traditions, and customs.
-- **Travel Tips**: Get practical advice on transportation, accommodation, and more.
+## Features
 
-![Screen Recording](./data/Screen%20Recording%202024-06-26%20at%2012.11.20.gif)
+- **Detailed Travel Itinerary**: Generate a complete travel itinerary including flight costs, weather forecasts, and top attractions.
+- **Customizable**: Tailor the itinerary to your destination and interests.
+- **User-Friendly**: Easy to use and provides insightful information for planning your trip.
 
-### Features
+## Getting Started
 
-- **Destination Search**: Enter a destination and receive comprehensive information about it.
+### Prerequisites
 
-### Technologies Used
+- Python 3.8 or higher
+- OpenAI API key
+- Serper API key
 
-- **LangChain**: For managing conversation flows and interactions.
-- **OpenAI API**: For generating detailed and accurate content.
+### Installation
 
-### Getting Started
+1. **Clone the Repository**
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/nuwan-dharmarathna/Virtual-Travel-Guide.git
-   ```
+    ```bash
+    git clone https://github.com/nuwan-dharmarathna/Virtual-Travel-Guide
+    cd Virtual-Travel-Guide
+    ```
+
+2. **Set Up a Virtual Environment**
+
+    ```bash
+    python -m venv venv
+    ```
+
+3. **Activate the Virtual Environment**
+
+    - On Windows:
+    
+      ```bash
+      venv\Scripts\activate
+      ```
+
+    - On macOS/Linux:
+    
+      ```bash
+      source venv/bin/activate
+      ```
+
+4. **Install the Required Packages**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+5. **Configure API Keys**
+
+    Ensure you have your Crewai, Serper API, OpenAI API keys. Set them up in your environment variables or a configuration file as per the project's requirements.
+
+6. **Run the Bot**
+
+    ```bash
+    streamlit run app.py
+    ```
+
+## References
+
+- [Crewai Documentation](https://github.com/crewAIInc/crewAI?tab=readme-ov-file#why-crewai)
+- [Serper Account](https://serper.dev/)
+- [OpenAI API Documentation](https://platform.openai.com/docs)
+- [YouTube](https://www.youtube.com/watch?v=sPzc6hMg7So&list=WL&index=1&t=31s)
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+

@@ -1,8 +1,4 @@
-import os
 from crewai import Crew
-
-
-from textwrap import dedent
 
 from agents import TravelAgents
 from agent_tasks import TravelTasks
@@ -39,14 +35,17 @@ class TripCrew:
             self.cities,
             self.date_range,
             self.interests,
-            self.origin
+            self.origin,
+            self.duration
+            
         )
         
         gather_city_info = tasks.gather_city_info(
             local_tour_guide,
             self.cities,
             self.date_range,
-            self.interests
+            self.interests,
+            self.duration,
         )
         
         # Define custom crew
@@ -59,35 +58,3 @@ class TripCrew:
         result = crew.kickoff()
         return result
     
-
-if __name__ == "__main__":
-    print("## Welcome to Trip Planner Crew")
-    print('-------------------------------')
-    origin = input(
-        dedent("""
-      From where will you be traveling from?
-    """))
-    cities = input(
-        dedent("""
-      What are the cities options you are interested in visiting?
-    """))
-    duration = input(
-        dedent("""
-      How many days are you planning to travel?
-    """))
-    date_range = input(
-        dedent("""
-      What is the date range you are interested in traveling?
-    """))
-    interests = input(
-        dedent("""
-      What are some of your high level interests and hobbies?
-    """))
-    
-    trip_crew = TripCrew(origin, cities, duration, date_range, interests)
-    result = trip_crew.plan_trip()
-    
-    print("## Trip Planning Completed")
-    print('-------------------------------')
-    print("-----Here is you Trip Plan-----")
-    print(result)

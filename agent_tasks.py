@@ -78,7 +78,7 @@ class TravelTasks:
             ),
         )
         
-    def identify_city(self, agent, city, travel_dates, interests, origin):
+    def identify_city(self, agent, city, travel_dates, interests, origin, duration):
         return Task(
             description = dedent(
                 f"""
@@ -92,6 +92,7 @@ class TravelTasks:
                     - Origin: {origin}
                     - Cites: {city}
                     - Trip Date: {travel_dates}
+                    - Duration: {duration} days
                     - Traveler Interests: {interests}      
                 """
             ),
@@ -103,7 +104,7 @@ class TravelTasks:
             ),
         )
         
-    def gather_city_info(self, agent, city, travel_dates, interests):
+    def gather_city_info(self, agent, city, travel_dates, interests, duration):
         return Task(
             description = dedent(
                 f"""
@@ -116,6 +117,7 @@ class TravelTasks:
                     **Parameters**: 
                     - Cites: {city}
                     - Trip Date: {travel_dates}
+                    - Duration: {duration} days
                     - Traveler Interests: {interests}
                 """
             ),

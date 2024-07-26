@@ -59,8 +59,8 @@ class TravelAgents:
                         including budget, packing suggestions, and safety tips."""),
             
             tools=[
-                search_tool.SearchTool().search_internet,
-                calculator_tool.perform_calculation
+                search_tool.SearchTool.search_internet,
+                calculator_tool.CalculatorTools.calculate
                 ],
             
             verbose=True,
