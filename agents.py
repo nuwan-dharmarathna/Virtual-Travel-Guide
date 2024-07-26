@@ -6,6 +6,8 @@ from langchain_openai import ChatOpenAI
 import os
 from dotenv import load_dotenv
 
+from tools import calculator_tool, search_tool
+
 load_dotenv()
 
 # thiss is an example of how to define custom agents
@@ -55,7 +57,12 @@ class TravelAgents:
             goal=dedent(f"""
                         Create a travel itinerary for the given number of days with detailed per-day plans, 
                         including budget, packing suggestions, and safety tips."""),
-            # tools=[tool1, tool2],
+            
+            tools=[
+                search_tool.SearchTool().search_internet,
+                calculator_tool.perform_calculation
+                ],
+            
             verbose=True,
             llm = self.OpenAIGPT35,
         )
@@ -67,7 +74,9 @@ class TravelAgents:
                              Expert at analyzing travel data to pick ideal destinations."""),
             goal=dedent(f"""
                         Select the best cities based on weather, season, prices, and traveler interests"""),
-            # tools=[tool1, tool2],
+            
+            tools=[search_tool.SearchTool().search_internet],
+            
             verbose=True,
             llm = self.OpenAIGPT35,
         )
@@ -79,7 +88,9 @@ class TravelAgents:
                              Knowledgeable local guide with extensive information about the city, it's attractions and customs"""),
             goal=dedent(f"""
                         Provide the BEST insights about the selected city"""),
-            # tools=[tool1, tool2],
+            
+            tools=[search_tool.SearchTool().search_internet],
+            
             verbose=True,
             llm = self.OpenAIGPT35,
         )

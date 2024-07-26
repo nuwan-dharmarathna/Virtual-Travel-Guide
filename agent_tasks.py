@@ -34,7 +34,8 @@ from textwrap import dedent
     def [task_name](self, agent, [parameters]):
         return Task(description=dedent(f'''
         **Task**: [Provide a concise name or summary of the task.]
-        **Description**: [Detailed description of what the agent is expected to do, including actionable steps and expected outcomes. This should be clear and direct, outlining the specific actions required to complete the task.]
+        **Description**: [Detailed description of what the agent is expected to do, including actionable steps and expected outcomes. 
+        This should be clear and direct, outlining the specific actions required to complete the task.]
 
         **Parameters**: 
         - [Parameter 1]: [Description]
@@ -48,6 +49,7 @@ from textwrap import dedent
 """
 
 class TravelTasks:
+    
     def plan_itinerary(self, agent, city, travel_dates, duration, interests):
         return Task(
             description = dedent(
@@ -65,11 +67,15 @@ class TravelTasks:
                     - City: {city}
                     - Trip Date: {travel_dates}
                     - Duration: {duration} days
-                    - Traveler Interests: {interests}
-
+                    - Traveler Interests: {interests}    
                 """
             ),
             agent=agent,
+            expected_output=dedent(
+                f"""
+                    A detailed itinerary for {city}, including flight costs, weather forecast, and attractions.
+                """
+            ),
         )
         
     def identify_city(self, agent, city, travel_dates, interests, origin):
@@ -86,11 +92,15 @@ class TravelTasks:
                     - Origin: {origin}
                     - Cites: {city}
                     - Trip Date: {travel_dates}
-                    - Traveler Interests: {interests}
-
+                    - Traveler Interests: {interests}      
                 """
             ),
             agent=agent,
+            expected_output=dedent(
+                f"""
+                    An in-depth guide for {city} with attractions, local customs, events, and recommendations.
+                """
+            ),
         )
         
     def gather_city_info(self, agent, city, travel_dates, interests):
@@ -107,8 +117,12 @@ class TravelTasks:
                     - Cites: {city}
                     - Trip Date: {travel_dates}
                     - Traveler Interests: {interests}
-
                 """
             ),
             agent=agent,
+            expected_output=dedent(
+                f"""
+                    Information about {city} including key attractions, customs, events, and recommendations.
+                """
+            ),
         )
